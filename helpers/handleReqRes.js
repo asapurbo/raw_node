@@ -43,7 +43,7 @@ handle.handleRegRes = (req, res) => {
         statusCode = typeof statusCode === 'number' ? statusCode : 500
         message = typeof message === 'object' ? message : false
 
-        
+
         res.statusCode = statusCode
         console.log(message);
 

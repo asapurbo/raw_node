@@ -8,6 +8,7 @@
 // dependencies
 const { createServer } = require('node:http')
 const { handleRegRes } = require('./helpers/handleReqRes')
+const { create } = require('./lib/data')
 
 // object - module-scaffolding
 const app = {}
@@ -17,6 +18,11 @@ const confi = {
     port: 9000
 }
 
+// for checking
+create('users', 'someting', {'name': 'apurbo', 'email': 'cstapurbo@gmail.com'}, (err) => {
+    console.log(err);
+    
+})
 
 // create server
 app.createServer = () => {
