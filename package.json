@@ -4,9 +4,13 @@
   "description": "It is raw node project",
   "main": "main.js",
   "scripts": {
-    "start": "nodemon main",
+    "start": "cross-env NODE_ENV=staging nodemon main",
+    "dev": "cross-env NODE_ENV=production nodemon main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "apurbo howlader",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^6.0.3"
+  }
 }

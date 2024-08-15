@@ -9,20 +9,16 @@
 const { createServer } = require('node:http')
 const { handleRegRes } = require('./helpers/handleReqRes')
 const { create, update, deleted } = require('./lib/data')
+const {currentEnv} = require('./handlers/envt')
 
 // object - module-scaffolding
 const app = {}
 
-// configuration file
-const confi = {
-    port: 9000
-}
-
 
 // create server
 app.createServer = () => {
-    createServer(app.handleRegRes).listen(confi.port, () => {
-        console.log('server is listening port on http://localhost:9000/');
+    createServer(app.handleRegRes).listen(currentEnv.port, () => {
+        console.log(`server is listening port on http://localhost:${currentEnv.port}/`);
     })
 }
 

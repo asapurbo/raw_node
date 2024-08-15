@@ -6,6 +6,7 @@
 
 // dependecies
 const { aboutHandler } = require('./handlers/aboutHandler');
+const { userHandler } = require('./handlers/userHander');
 
 // module-scaffolding
 const handler = {};
@@ -13,6 +14,7 @@ const handler = {};
 // create routes
 handler.routes = {
     about: aboutHandler,
+    user: userHandler
 };
 
 
