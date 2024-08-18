@@ -6,7 +6,8 @@
 
 // dependecies
 const { aboutHandler } = require('./handlers/aboutHandler');
-const { userHandler } = require('./handlers/userHander');
+const { userHandler } = require('./handlers/userHandler');
+const { tokenHandler } = require('./handlers/tokenHendler')
 
 // module-scaffolding
 const handler = {};
@@ -14,7 +15,8 @@ const handler = {};
 // create routes
 handler.routes = {
     about: aboutHandler,
-    user: userHandler
+    user: userHandler,
+    token: tokenHandler
 };
 
 

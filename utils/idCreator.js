@@ -7,11 +7,12 @@
 // dependecies
 
 // creator
-const idCreator = () => {
+const idCreator = (len) => {
+    const strLength = typeof len === 'number' ? len : 18
     const id = 'abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let mainId = '';
 
-    for (let index = 0; index <= 18; index++) {
+    for (let index = 0; index <= strLength; index++) {
         mainId += id.charAt(Math.floor(Math.random() * id.length));
     }
 
